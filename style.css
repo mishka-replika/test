@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00ff00;
+    letter-spacing: 3px;
+}
+
+.score, .lives {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#gameCanvas {
+    border: 2px solid #00ff00;
+    background: #000;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+.instructions {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+.game-over, .start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.start-screen {
+    border-color: #00ff00;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+}
+
+.start-screen h2 {
+    color: #00ff00;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.game-over h2 {
+    color: #ff0000;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .game-container {
+        padding: 10px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

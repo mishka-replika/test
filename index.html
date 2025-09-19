@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders 2D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>SPACE INVADERS</h1>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="lives">Lives: <span id="lives">3</span></div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="instructions">
+            <p>Use ← → arrow keys to move, SPACEBAR to shoot</p>
+            <p>Press ENTER to start/restart game</p>
+        </div>
+        
+        <div id="gameOverScreen" class="game-over hidden">
+            <h2>GAME OVER</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Press ENTER to play again</p>
+        </div>
+        
+        <div id="startScreen" class="start-screen">
+            <h2>SPACE INVADERS</h2>
+            <p>Defend Earth from the alien invasion!</p>
+            <p>Press ENTER to start</p>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
